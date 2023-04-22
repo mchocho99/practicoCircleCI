@@ -61,7 +61,7 @@ jobs:
       - run: npm run release -- --release-as major
       - run: |
           git commit --allow-empty -m "build: [skip ci] Automated Release"
-      - run: git push https://$GITHUB_DEVOPS_USERNAME:$GITHUB_DEVOPS_USER_ACCESS_TOKEN@$GITHUB_PROJECT main --follow-tags
+      - run: git push https://$GITHUB_DEVOPS_USERNAME:$GITHUB_DEVOPS_USER_ACCESS_TOKEN@$GITHUB_PROJECT master --follow-tags
 
   build:
     <<: *node-container
